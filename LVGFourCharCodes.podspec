@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.name         = "LVGFourCharCodes"
   s.version      = "0.0.3"
   s.summary      = "Convert a four-byte integer type to a four-char string."
-  s.homepage     = 'https://github.com/letvargo/'
+  s.homepage     = 'https://github.com/letvargo/LVGFourCharCodes'
   s.description  = <<-DESC
 This framework is used to convert four-byte integer types like OSStatus, UInt32, Int32, etc., to the four-character string. It is useful in debugging functions that return OSStatus error codes, or getting the four-character description of a property that is defined by a constant.
                    DESC

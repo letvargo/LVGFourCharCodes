@@ -8,6 +8,7 @@
 
 import XCTest
 import LVGFourCharCodes
+import AudioToolbox
 
 class FourCharCodeTests: XCTestCase {
 
@@ -19,6 +20,29 @@ class FourCharCodeTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testCodeStringAgainstKnownValue() {
+        if  let codeString = kAudioServicesBadPropertySizeError.codeString {
+            XCTAssertEqual(codeString, "!siz", "codeString property did not compute correct value of '!siz'")
+        } else {
+            XCTFail("codeString was 'nil' for value with known FourCharCode '!siz'.")
+        }
+    }
+    
+    func testInvalidValueReturnsNilCodeString() {
+        let value: UInt32 = 0
+        XCTAssertNil(value.codeString, "UInt32 value of 0 failed to return a nil codeString.")
+    }
+    
+    func testNegativeValueReturnsNilCodeString() {
+        let value: Int32 = -1500
+        XCTAssertNil(value.codeString, "Int32 value of -1500 failed to return a nil codeString.")
+    }
+    
+    func testValueLessThan4BytesReturnsNilCodeString() {
+        let value: UInt32 = 0b00000000001111110011111100111111
+        XCTAssertNil(value.codeString, "UInt32 value not 4-bytes long failed to return a nil codeString.")
     }
 
     func testCodeAndDecodeAreEqual() {
