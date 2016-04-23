@@ -1,0 +1,16 @@
+PODS:
+  - LVGFourCharCodes (0.0.2)
+
+DEPENDENCIES:
+  - LVGFourCharCodes (from `../`)
+
+EXTERNAL SOURCES:
+  LVGFourCharCodes:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LVGFourCharCodes: 2475cef63b7d6cf24b068535f5468bba5b075a10
+
+PODFILE CHECKSUM: 4628905c51611aca5dc2c460bc9bad96ed86b248
+
+COCOAPODS: 1.0.0.beta.8
