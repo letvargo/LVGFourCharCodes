@@ -131,5 +131,27 @@ extension CodedErrorType {
 }
 
 extension String {
+
+    var code: UInt32? {
     
+        func pointsToUInt32(points: UnsafePointer<UInt8>) -> UInt32 {
+            return UnsafePointer<UInt32>(points).memory
+        }
+    
+        let codePoints = Array(self.utf8)
+        
+        guard
+            codePoints.count == 4
+        else {
+            return nil
+        }
+        
+        guard
+            codePoints.reduce(true, combine: { $0 && (32..<127).contains($1) })
+        else {
+            return nil
+        }
+        
+        return pointsToUInt32(codePoints)
+    }
 }
