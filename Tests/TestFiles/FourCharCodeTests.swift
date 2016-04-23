@@ -21,10 +21,33 @@ class FourCharCodeTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        let i: Int32 = KAUTH_ENDIAN_DISK
-        print(i.codeString)
-        print("wht?".code)
+    func testCodeAndDecodeAreEqual() {
+        if  let code = "wht?".code,
+            let decode = code.codeString {
+            XCTAssertEqual("wht?", decode, "Could not encode and decode 'wht?'")
+        } else {
+            XCTFail("Either 'code' or 'decode' was nil.")
+        }
+    }
+    
+    func testEmptyStringCodeIsNil() {
+        XCTAssertNil("".code, "Empty string does not produce nil value.")
+    }
+    
+    func testLongStringIsNil() {
+        XCTAssertNil("5char".code, "String with length of five chars does not produce nil value.")
+    }
+    
+    func testNonASCIIChar31IsNil() {
+        XCTAssertNil("\u{ff}xxx".code, "Character outside ASCII range does not produce nil value.")
+    }
+    
+    func testNONASCIIChar127IsNil() {
+        XCTAssertNil("\u{7f}xxx".code)
+    }
+    
+    func testHighComposedUnicodeCharIsNil() {
+        XCTAssertNil("\u{2190}x".code, "Unicode value '0x2190' does not produce nil value.")
     }
 
     func testPerformanceExample() {
@@ -33,5 +56,4 @@ class FourCharCodeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

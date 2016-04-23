@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD2E04AE686CF18FF6054F5B"
+               BlueprintIdentifier = "749EFE986D86B247968A1304"
                BuildableName = "LVGFourCharCodes.framework"
                BlueprintName = "LVGFourCharCodes-OSX"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD2E04AE686CF18FF6054F5B"
+            BlueprintIdentifier = "749EFE986D86B247968A1304"
             BuildableName = "LVGFourCharCodes.framework"
             BlueprintName = "LVGFourCharCodes-OSX"
             ReferencedContainer = "container:Pods.xcodeproj">
