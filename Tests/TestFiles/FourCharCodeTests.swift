@@ -24,6 +24,7 @@ class FourCharCodeTests: XCTestCase {
     func testExample() {
         let i: Int32 = KAUTH_ENDIAN_DISK
         print(i.codeString)
+        print("wht?".code)
     }
 
     func testPerformanceExample() {
