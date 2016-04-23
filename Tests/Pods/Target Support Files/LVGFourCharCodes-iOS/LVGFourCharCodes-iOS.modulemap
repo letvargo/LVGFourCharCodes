@@ -1,6 +1,0 @@
-framework module LVGFourCharCodes {
-  umbrella header "LVGFourCharCodes-iOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

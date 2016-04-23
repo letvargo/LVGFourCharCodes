@@ -7,10 +7,10 @@ install! 'cocoapods',
 
 target 'Tests-iOS' do
     platform :ios, '8.0'
-    pod 'LVGFourCharCodes'
+    pod 'LVGFourCharCodes', :path => '../'
 end
 
 target 'Tests-OSX' do
     platform :osx, '10.10'
-    pod 'LVGFourCharCodes'
+    pod 'LVGFourCharCodes', :path => '../'
 end
