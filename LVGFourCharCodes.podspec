@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LVGFourCharCodes"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Convert a four-byte integer type to a four-char string."
   s.homepage     = 'https://github.com/letvargo/'
   s.description  = <<-DESC
