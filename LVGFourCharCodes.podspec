@@ -11,6 +11,7 @@ This framework is used to convert four-byte integer types like OSStatus, UInt32,
   s.author             = { "Aaron Rasmussen" => "letvargo@gmail.com" }
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
+  s.framework = 'Foundation'
   s.source       = { :git => "https://github.com/letvargo/LVGFourCharCodes.git", :tag => "0.0.3" }
   s.source_files  = "Source/**/*"
   s.requires_arc = true
