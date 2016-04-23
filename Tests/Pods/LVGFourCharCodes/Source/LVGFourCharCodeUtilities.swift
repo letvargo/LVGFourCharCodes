@@ -129,3 +129,7 @@ extension CodedErrorType {
         { throw self.init(status: status, message: message) }
     }
 }
+
+extension String {
+    
+}
