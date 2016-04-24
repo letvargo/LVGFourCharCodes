@@ -1,4 +1,4 @@
-# LVGUtilities
+# LVGFourCharCodes
 
 [![CI Status](http://img.shields.io/travis/letvargo/LVGFourCharCodes.svg?style=flat)](https://travis-ci.org/letvargo/LVGFourCharCodes)
 
